@@ -88,9 +88,9 @@ namespace ToDoList_1.Presentation
             ListTask listTask = toDoListBuisness.Get(id);
             if (listTask != null)
             {
-                Console.WriteLine("Enter name: ");
-                listTask.Time = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter days for transmission: ");
+                listTask.Time = int.Parse(Console.ReadLine());
+                Console.WriteLine("Enter name: ");
                 listTask.TaskName = Console.ReadLine();
                 toDoListBuisness.Update(listTask);
             }
@@ -117,7 +117,7 @@ namespace ToDoList_1.Presentation
             var products = toDoListBuisness.GetAll();
             foreach (var item in products)
             {
-                Console.WriteLine("{0} {1} {2}", item.Id, item.TaskName, item.Time);
+                Console.WriteLine("{0}. {1} {2} days for transmission!", item.Id, item.TaskName, item.Time);
             }
         }
 
