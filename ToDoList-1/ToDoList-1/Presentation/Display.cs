@@ -88,6 +88,7 @@ namespace ToDoList_1.Presentation
             ListTask listTask = toDoListBuisness.Get(id);
             if (listTask != null)
             {
+
                 Console.WriteLine("Enter days for transmission: ");
                 listTask.Time = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter name: ");
